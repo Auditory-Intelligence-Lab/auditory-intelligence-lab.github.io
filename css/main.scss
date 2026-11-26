@@ -91,3 +91,328 @@ firstp {
     margin-right: 30px;
 }
 
+/* =========================================
+   AILab Design System v1.0
+   White / Gray / Yellow
+   ========================================= */
+
+
+/* 1. Brand Colors */
+
+:root {
+    --ailab-yellow: #F5C518;
+    --ailab-yellow-hover: #E5B60F;
+    --ailab-yellow-light: #FFF8D9;
+
+    --ailab-white: #FFFFFF;
+    --ailab-gray-50: #F5F5F5;
+    --ailab-gray-200: #E5E7EB;
+    --ailab-gray-300: #D1D5DB;
+    --ailab-gray-500: #6B7280;
+    --ailab-gray-700: #374151;
+
+    --ailab-radius: 6px;
+    --ailab-transition: 0.2s ease;
+}
+
+
+/* 2. Global Typography */
+
+body {
+    background-color: var(--ailab-white);
+    color: var(--ailab-gray-700);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Apple SD Gothic Neo",
+        "Malgun Gothic",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+    line-height: 1.75;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* 3. Global Layout */
+
+.container-fluid {
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+body > .container-fluid {
+    padding-top: 35px;
+    padding-bottom: 70px;
+}
+
+
+/* 4. Headings */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ailab-gray-700);
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: -1.2px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+
+/* 5. Body Text */
+
+p {
+    margin-bottom: 16px;
+}
+
+strong, b {
+    font-weight: 700;
+}
+
+.text-muted {
+    color: var(--ailab-gray-500);
+}
+
+
+/* 6. Links */
+
+a {
+    color: var(--ailab-gray-700);
+    transition: color var(--ailab-transition);
+}
+
+a:hover {
+    color: var(--ailab-gray-700);
+    text-decoration-color: var(--ailab-yellow);
+}
+
+body > .container-fluid a:not(.btn) {
+    text-decoration: underline;
+    text-decoration-color: var(--ailab-gray-300);
+    text-underline-offset: 4px;
+}
+
+body > .container-fluid a:not(.btn):hover {
+    text-decoration-color: var(--ailab-yellow);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--ailab-gray-700);
+    outline-offset: 4px;
+}
+
+
+/* 7. Buttons */
+
+.btn {
+    border-radius: var(--ailab-radius);
+    padding: 12px 22px;
+    font-weight: 600;
+    transition: var(--ailab-transition);
+}
+
+.btn-primary,
+.btn-primary:focus {
+    background-color: var(--ailab-yellow);
+    border-color: var(--ailab-yellow);
+    color: var(--ailab-gray-700);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    background-color: var(--ailab-yellow-hover);
+    border-color: var(--ailab-yellow-hover);
+    color: var(--ailab-gray-700);
+}
+
+.btn-default {
+    background-color: var(--ailab-white);
+    border: 1px solid var(--ailab-gray-300);
+    color: var(--ailab-gray-700);
+}
+
+.btn-default:hover {
+    background-color: var(--ailab-gray-50);
+    border-color: var(--ailab-gray-500);
+}
+
+
+/* 8. Reusable Cards */
+
+.ailab-card {
+    background-color: var(--ailab-white);
+    border: 1px solid var(--ailab-gray-200);
+    border-radius: var(--ailab-radius);
+    padding: 24px;
+    transition:
+        border-color var(--ailab-transition),
+        box-shadow var(--ailab-transition);
+}
+
+.ailab-card:hover {
+    border-color: var(--ailab-yellow);
+    box-shadow: 0 4px 16px rgba(55, 65, 81, 0.08);
+}
+
+
+/* 9. Section Titles */
+
+.section-title {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 30px;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    bottom: 0.15em;
+    width: 4px;
+    background-color: var(--ailab-yellow);
+    border-radius: 2px;
+}
+
+
+/* 10. Images */
+
+body > .container-fluid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--ailab-radius);
+}
+
+
+/* 11. Tables */
+
+body > .container-fluid table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+body > .container-fluid table th {
+    background-color: var(--ailab-gray-50);
+    color: var(--ailab-gray-700);
+    font-weight: 600;
+    border-bottom: 2px solid var(--ailab-gray-300);
+}
+
+body > .container-fluid table td {
+    border-bottom: 1px solid var(--ailab-gray-200);
+}
+
+body > .container-fluid table tbody tr:hover {
+    background-color: var(--ailab-yellow-light);
+}
+
+
+/* 12. Dividers */
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--ailab-gray-200);
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+/* 13. Text Selection */
+
+::selection {
+    background-color: var(--ailab-yellow);
+    color: var(--ailab-gray-700);
+}
+
+
+/* 14. Responsive Design */
+
+@media (max-width: 991px) {
+    .container-fluid {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    body > .container-fluid {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .ailab-card {
+        padding: 18px;
+    }
+}
+
+
+/* 15. Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .ailab-card,
+    .btn,
+    a {
+        transition: none;
+    }
+}
