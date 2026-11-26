@@ -1,77 +1,89 @@
 ---
 title: "Auditory Intelligence Lab - Publications"
 layout: textlay
-excerpt: "International Journal and Conference Publications"
+excerpt: "Journal and Conference Publications"
 sitemap: false
 permalink: /publications/
 ---
 
-<style>
-.publication-list {
-    font-size: 16px;
-    line-height: 1.8;
-}
+<div class="publication-page-header" markdown="0">
 
-.publication-list h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ddd;
-    scroll-margin-top: 80px;
-}
+  <h1>Publications</h1>
 
-.publication-list ul {
-    list-style-type: none;
-    padding-left: 0;
-}
+  <div class="publication-heading-line"></div>
 
-.publication-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-}
+  <p>Journal &amp; Conference Publications</p>
 
-.year-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 25px 0;
-}
-
-.year-nav a {
-    padding: 7px 14px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-.year-nav a:hover {
-    background-color: #e0e0e0;
-}
-</style>
-
-# Publications
-
-## International Journal & Conference
-
-<div class="year-nav" markdown="0">
-  <a href="#year-2026">2026</a>
-  <a href="#year-2025">2025</a>
-  <a href="#year-2024">2024</a>
-  <a href="#year-2023">2023</a>
-  <a href="#year-2022">2022</a>
-  <a href="#year-2021">2021</a>
-  <a href="#year-2020">2020</a>
-  <a href="#year-2019">2019</a>
-  <a href="#year-2017">2017</a>
-  <a href="#year-2016">2016</a>
-  <a href="#year-2015">2015</a>
-  <a href="#year-2014">2014</a>
-  <a href="#year-2013">2013</a>
-  <a href="#year-2012">2012</a>
-  <a href="#year-2010">2010</a>
 </div>
+
+
+<div class="publication-filter" id="publication-filter" hidden markdown="0">
+
+  <div class="publication-filter-grid">
+
+    <div class="publication-search">
+
+      <label for="publication-search-input">
+        Search Publications
+      </label>
+
+      <div class="publication-search-box">
+
+        <i data-lucide="search" aria-hidden="true"></i>
+
+        <input
+          type="search"
+          id="publication-search-input"
+          placeholder="Search by title, author, or keyword..."
+          autocomplete="off">
+
+      </div>
+
+    </div>
+
+
+    <div class="publication-year">
+
+      <label for="publication-year-select">Year</label>
+
+      <select id="publication-year-select">
+        <option value="all">All Years</option>
+      </select>
+
+    </div>
+
+  </div>
+
+
+  <div class="publication-filter-bottom">
+
+    <span id="publication-count"
+          role="status"
+          aria-live="polite"></span>
+
+    <button type="button" id="publication-reset">
+
+      <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+
+      Reset Filters
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<div id="publication-empty" hidden markdown="0">
+
+  <i data-lucide="search-x" aria-hidden="true"></i>
+
+  <h3>No publications found.</h3>
+
+  <p>Try a different keyword or year.</p>
+
+</div>
+
 
 <div class="publication-list" markdown="1">
 
@@ -344,3 +356,187 @@ permalink: /publications/
   *27th Speech Communication and Signal Processing Conference (제27회 음성통신 및 신호처리 학술대회)*, pp. 156–157, Seoul, Korea, Aug. 2010.
 
 </div>
+
+<script>
+(function () {
+
+    const list = document.querySelector('.publication-list');
+    const filter = document.getElementById('publication-filter');
+    const search = document.getElementById('publication-search-input');
+    const yearSelect = document.getElementById('publication-year-select');
+    const reset = document.getElementById('publication-reset');
+    const count = document.getElementById('publication-count');
+    const empty = document.getElementById('publication-empty');
+
+    if (!list || !filter || !search || !yearSelect ||
+        !reset || !count || !empty) {
+        return;
+    }
+
+
+    /* 1. Collect Publications by Year */
+
+    const groups = [];
+
+    let currentGroup = null;
+
+    Array.from(list.children).forEach(function (element) {
+
+        if (element.tagName === 'H2' &&
+            /^\d{4}$/.test(element.textContent.trim())) {
+
+            currentGroup = {
+                year: element.textContent.trim(),
+                heading: element,
+                lists: [],
+                papers: []
+            };
+
+            groups.push(currentGroup);
+
+        } else if (element.tagName === 'UL' && currentGroup) {
+
+            currentGroup.lists.push(element);
+
+            Array.from(element.children).forEach(function (item) {
+
+                if (item.tagName === 'LI') {
+                    currentGroup.papers.push(item);
+                }
+
+            });
+        }
+    });
+
+
+    if (!groups.some(function (group) {
+        return group.papers.length > 0;
+    })) {
+        return;
+    }
+
+
+    /* 2. Generate Year Options Automatically */
+
+    const years = [...new Set(groups.map(function (group) {
+        return group.year;
+    }))];
+
+    years.sort(function (a, b) {
+        return Number(b) - Number(a);
+    });
+
+    years.forEach(function (year) {
+
+        const option = document.createElement('option');
+
+        option.value = year;
+        option.textContent = year;
+
+        yearSelect.appendChild(option);
+
+    });
+
+
+    /* 3. Search and Filter */
+
+    function normalize(text) {
+
+        return text
+            .normalize('NFKC')
+            .toLowerCase()
+            .trim();
+
+    }
+
+
+    function updatePublications() {
+
+        const query = normalize(search.value);
+
+        const keywords = query.split(/\s+/).filter(Boolean);
+
+        const selectedYear = yearSelect.value;
+
+        let totalVisible = 0;
+
+
+        groups.forEach(function (group) {
+
+            let visible = 0;
+
+            group.papers.forEach(function (paper) {
+
+                const content = normalize(
+                    paper.textContent + ' ' + group.year
+                );
+
+                const matchesSearch = keywords.every(function (word) {
+                    return content.includes(word);
+                });
+
+                const matchesYear =
+                    selectedYear === 'all' ||
+                    selectedYear === group.year;
+
+                const show = matchesSearch && matchesYear;
+
+                paper.hidden = !show;
+
+                if (show) {
+                    visible++;
+                    totalVisible++;
+                }
+
+            });
+
+
+            group.heading.hidden = visible === 0;
+
+            group.lists.forEach(function (ul) {
+
+                ul.hidden = !Array.from(ul.children).some(function (li) {
+                    return li.tagName === 'LI' && !li.hidden;
+                });
+
+            });
+
+        });
+
+
+        count.textContent =
+            totalVisible +
+            (totalVisible === 1 ? ' publication' : ' publications');
+
+        empty.hidden = totalVisible !== 0;
+
+    }
+
+
+    /* 4. Event Listeners */
+
+    search.addEventListener('input', updatePublications);
+
+    yearSelect.addEventListener('change', updatePublications);
+
+    reset.addEventListener('click', function () {
+
+        search.value = '';
+
+        yearSelect.value = 'all';
+
+        updatePublications();
+
+        search.focus();
+
+    });
+
+
+    /* 5. Initialize */
+
+    filter.hidden = false;
+
+    updatePublications();
+
+})();
+</script>
