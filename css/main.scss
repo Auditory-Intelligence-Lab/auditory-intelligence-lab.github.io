@@ -1090,3 +1090,315 @@ body > .container-fluid {
         transition: none;
     }
 }
+
+/* =========================================
+   AILab Research Page v1.0
+   ========================================= */
+
+
+/* 1. Page Header */
+
+.research-page-header {
+    margin-bottom: 45px;
+}
+
+.research-page-header h1 {
+    margin-bottom: 16px;
+}
+
+.research-heading-line {
+    width: 50px;
+    height: 4px;
+    background-color: var(--ailab-yellow);
+    margin-bottom: 20px;
+}
+
+.research-page-header p {
+    color: var(--ailab-gray-500);
+    font-size: 17px;
+}
+
+
+/* 2. Research Layout */
+
+.research-page-layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    align-items: start;
+    gap: 45px;
+}
+
+
+/* 3. Sticky Sidebar */
+
+.research-sidebar {
+    position: sticky;
+    top: 110px;
+
+    background-color: var(--ailab-gray-50);
+    border: 1px solid var(--ailab-gray-200);
+    border-radius: 8px;
+
+    padding: 20px 12px;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+}
+
+.research-sidebar h4 {
+    color: var(--ailab-gray-500);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    margin: 0 12px 20px;
+}
+
+body > .container-fluid .research-sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 12px;
+    margin-bottom: 5px;
+
+    color: var(--ailab-gray-700);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    border-radius: 5px;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.research-sidebar a svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    stroke-width: 1.7;
+    color: var(--ailab-gray-500);
+}
+
+body > .container-fluid .research-sidebar a:hover {
+    background-color: var(--ailab-gray-200);
+}
+
+body > .container-fluid .research-sidebar a.active {
+    background-color: var(--ailab-yellow-light);
+    font-weight: 700;
+}
+
+.research-sidebar a.active svg {
+    color: #806400;
+}
+
+
+/* 4. Research Content */
+
+.research-main {
+    min-width: 0;
+}
+
+.research-block {
+    scroll-margin-top: 110px;
+
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+
+    border-bottom: 1px solid var(--ailab-gray-200);
+}
+
+.research-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.research-label {
+    display: inline-block;
+
+    color: #806400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    background-color: var(--ailab-yellow-light);
+    border-radius: 4px;
+    padding: 5px 12px;
+}
+
+.research-block h2 {
+    font-size: 29px;
+    line-height: 1.4;
+    margin: 18px 0 25px;
+}
+
+.research-block h3 {
+    font-size: 21px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+.research-block ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.research-block li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.research-block li::before {
+    content: "";
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    top: 12px;
+    left: 0;
+
+    background-color: var(--ailab-yellow);
+    border-radius: 50%;
+}
+
+
+/* 5. Research Images */
+
+.research-block figure {
+    background-color: var(--ailab-white);
+    border: 1px solid var(--ailab-gray-200);
+    border-radius: 8px;
+
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.research-block figure img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0;
+}
+
+.research-block figcaption {
+    color: var(--ailab-gray-500);
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+
+    margin: 18px 0 0;
+}
+
+
+/* 6. Subsections */
+
+.research-subsection {
+    margin-top: 28px;
+}
+
+.research-subsection + .research-subsection {
+    border-top: 1px dashed var(--ailab-gray-300);
+    padding-top: 35px;
+    margin-top: 35px;
+}
+
+
+/* 7. Tablet */
+
+@media (max-width: 991px) {
+
+    .research-page-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .research-sidebar {
+        position: static;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .research-sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .research-sidebar h4 {
+        grid-column: 1 / -1;
+        margin-bottom: 10px;
+    }
+
+    .research-block h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* 8. Mobile */
+
+@media (max-width: 600px) {
+
+    .research-page-header {
+        margin-bottom: 25px;
+    }
+
+    .research-page-header p {
+        font-size: 15px;
+    }
+
+    .research-sidebar {
+        padding: 16px 8px;
+    }
+
+    body > .container-fluid .research-sidebar a {
+        font-size: 12px;
+        padding: 12px 8px;
+        gap: 8px;
+    }
+
+    .research-sidebar a svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .research-block {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .research-block h2 {
+        font-size: 23px;
+    }
+
+    .research-block h3 {
+        font-size: 18px;
+    }
+
+    .research-block li {
+        font-size: 15px;
+    }
+
+    .research-block figure {
+        padding: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .research-sidebar a {
+        transition: none;
+    }
+}
