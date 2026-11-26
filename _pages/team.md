@@ -10,21 +10,24 @@ permalink: /team/
 
 
 ## Ph.D.
-| Name | Start Date | Research Interest |
+
+| Name | Start Date | Research Topic |
 | --- | --- | --- |
 | SeungHee Ma | 20??.?? | Continual Learning, Speech LLM |
 | NamHyun Cho | 20??.?? | TBD |
 
 
 ## Master Students
-| Name | Start Date | Research Interest |
+
+| Name | Start Date | Research Topic |
 | --- | --- | --- |
 | GyuTae Park | 2026.03 | Speech LLM |
 | NamHyun Cho | 2026.09 | Audio Generation, Spatial Audio |
 
 
 ## Undergraduate Students
-| Name | Start Date | Research Interest |
+
+| Name | Start Date | Research Topic |
 | --- | --- | --- |
 | DongHwan Jang | 2026.07 | Audio Generation |
 | DongYoung Kim | 2026.09 | Sound World Model |
@@ -32,6 +35,11 @@ permalink: /team/
 
 
 ## Alumni
+
+| Name | Date | Research Topic |
+| --- | --- | --- |
+| TBD | TBD | TBD |
+| TBD | TBD | TBD |
 
 ## Administrative Support
 <a href="mailto:Rijsewijk@Physics.LeidenUniv.nl">Ellie van Rijsewijk</a> is helping us (and other groups) with administration.
