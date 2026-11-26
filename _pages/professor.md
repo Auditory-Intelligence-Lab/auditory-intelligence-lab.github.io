@@ -5,6 +5,8 @@ team_tab: professor
 permalink: /team/
 ---
 
+# Professor
+
 <div class="row" markdown="0">
 
   <div class="col-sm-3">
@@ -16,8 +18,6 @@ permalink: /team/
   <div class="col-sm-9">
 
     <h2>Ji-Hwan Kim (김지환)</h2>
-
-    <p><strong>Professor</strong></p>
 
     <p>
       Department of Computer Science &amp; Engineering<br>
