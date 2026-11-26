@@ -1,7 +1,8 @@
 ---
-title: "Auditory Intelligence Lab - Team"
-layout: textlay
-permalink: /team/
+title: "Auditory Intelligence Lab - Current Members"
+layout: teamtabs
+team_tab: members
+permalink: /team/members/
 ---
 
 # Team Members
