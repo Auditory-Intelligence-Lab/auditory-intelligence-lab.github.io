@@ -67,10 +67,8 @@ We are currently building up our instruments right in the center of Munich, in t
 
 
 
-<figure class="fifth">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/LMU_logo.png" style="width: 130px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_Leiden.jpg" style="width: 140px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Tschira.png" style="width: 150px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_ERC.jpg" style="width: 100px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/SuperC_logo.png" style="width: 100px">
+<figure style="text-align: center; margin: 40px 0;">
+  <a href="https://www.sogang.ac.kr/" target="_blank" rel="noopener noreferrer">
+    <img src="{{ site.baseurl }}/images/logo_sogang.png" alt="Sogang University" style="width: 200px; max-width: 100%;">
+  </a>
 </figure>
