@@ -6,6 +6,18 @@ sitemap: false
 permalink: /research/
 ---
 
+<style>
+#textid h2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+#textid h3 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+</style>
+
 # Research
 
 ## 1. Sound World Model for Physical AI
