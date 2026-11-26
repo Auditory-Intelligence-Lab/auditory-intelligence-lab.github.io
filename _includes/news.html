@@ -1,48 +1,33 @@
-<style>
-.news-row {
-    display: flex;
-    align-items: baseline;
-    gap: 25px;
-    padding: 12px 0;
-    border-bottom: 1px solid #e5e5e5;
-}
+<section class="home-section">
 
-.news-date {
-    flex-shrink: 0;
-    width: 130px;
-    color: #777;
-    font-weight: bold;
-}
+  <div class="home-section-header">
 
-.news-content {
-    flex: 1;
-}
+    <h2 class="section-title">Latest News</h2>
 
-.news-content p {
-    margin: 0;
-}
+    <a href="{{ site.baseurl }}/allnews.html">
+      View all News &rarr;
+    </a>
 
-@media (max-width: 600px) {
-    .news-row {
-        flex-direction: column;
-        gap: 5px;
-    }
-}
-</style>
+  </div>
 
-<h2 style="margin-bottom: 25px;">News</h2>
+  <div class="home-news-list">
 
-{% for article in site.data.news limit:5 %}
+    {% for article in site.data.news limit:5 %}
 
-<div class="news-row">
-    <div class="news-date">{{ article.date }}</div>
-    <div class="news-content">
+    <div class="home-news-row">
+
+      <div class="home-news-date">
+        {{ article.date }}
+      </div>
+
+      <div class="home-news-content">
         {{ article.headline | markdownify }}
+      </div>
+
     </div>
-</div>
 
-{% endfor %}
+    {% endfor %}
 
-<p style="text-align: right; margin-top: 20px;">
-    <a href="{{ site.baseurl }}/allnews.html">View all News &rarr;</a>
-</p>
+  </div>
+
+</section>
