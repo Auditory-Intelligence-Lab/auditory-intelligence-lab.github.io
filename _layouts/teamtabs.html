@@ -3,25 +3,5 @@ layout: default
 ---
 
 <div class="col-sm-12">
-
-  <h1>Team</h1>
-
-  <ul class="nav nav-tabs" style="margin-top: 25px; margin-bottom: 40px;">
-
-    <li {% if page.team_tab == 'professor' %}class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/team/">Professor</a>
-    </li>
-
-    <li {% if page.team_tab == 'members' %}class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/team/members/">Current Members</a>
-    </li>
-
-    <li {% if page.team_tab == 'alumni' %}class="active"{% endif %}>
-      <a href="{{ site.baseurl }}/team/alumni/">Alumni</a>
-    </li>
-
-  </ul>
-
-  {{ content }}
-
+    {{ content }}
 </div>
