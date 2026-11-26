@@ -57,7 +57,7 @@ permalink: /team/members/
 | Name | Start Date | Research Topic |
 | --- | --- | --- |
 | GyuTae Park | 2026.03 | Speech LLM |
-| NamHyun Cho | 2026.09 | Audio Generation, Spatial Audio |
+| JinHyeong Kim | 2026.09 | Audio Generation, Spatial Audio |
 
 ## Undergraduate Researchers
 
