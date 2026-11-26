@@ -5,18 +5,52 @@ team_tab: members
 permalink: /team/members/
 ---
 
-# Team Members
+<style>
+.member-list h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
 
- **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
+.member-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
 
+.member-list th {
+    background-color: #f5f5f5;
+    padding: 15px;
+    text-align: left;
+}
 
-## Ph.D.
+.member-list td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.member-list th:nth-child(1) {
+    width: 25%;
+}
+
+.member-list th:nth-child(2) {
+    width: 20%;
+}
+
+.member-list th:nth-child(3) {
+    width: 55%;
+}
+</style>
+
+# Current Members
+
+<div class="member-list" markdown="1">
+
+## Ph.D. Students
 
 | Name | Start Date | Research Topic |
 | --- | --- | --- |
-| SeungHee Ma | 20??.?? | Continual Learning, Speech LLM |
-| NamHyun Cho | 20??.?? | TBD |
-
+| SeungHee Ma | TBD | Continual Learning, Speech LLM |
+| NamHyun Cho | TBD | TBD |
 
 ## Master Students
 
@@ -25,21 +59,11 @@ permalink: /team/members/
 | GyuTae Park | 2026.03 | Speech LLM |
 | NamHyun Cho | 2026.09 | Audio Generation, Spatial Audio |
 
-
-## Undergraduate Students
+## Undergraduate Researchers
 
 | Name | Start Date | Research Topic |
 | --- | --- | --- |
 | DongHwan Jang | 2026.07 | Audio Generation |
 | DongYoung Kim | 2026.09 | Sound World Model |
 
-
-
-## Alumni
-
-| Name | Date | Research Topic |
-| --- | --- | --- |
-| TBD | TBD | TBD |
-| TBD | TBD | TBD |
-
-
+</div>
