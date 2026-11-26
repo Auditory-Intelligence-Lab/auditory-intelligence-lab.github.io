@@ -5,7 +5,7 @@ team_tab: professor
 permalink: /team/
 ---
 
-<div class="row">
+<div class="row" markdown="0">
 
   <div class="col-sm-3">
     <img src="{{ site.baseurl }}/images/prof.jpg"
