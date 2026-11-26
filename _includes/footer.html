@@ -1,44 +1,66 @@
-<div id="footer" class="panel">
-  <div class="panel-footer">
-    <div class="container-fluid">
-      <div class="row">
+<footer id="footer" class="ailab-footer">
 
-        <div class="col-sm-4">
-  <p>
-    &copy; {{ site.time | date: '%Y' }} Auditory Intelligence Lab.<br>
-    All rights reserved.<br>
-    Powered by <a href="https://jekyllrb.com">Jekyll</a>.
-  </p>
+  <div class="container-fluid">
 
-  <a href="https://www.sogang.ac.kr/" target="_blank" rel="noopener noreferrer">
-    <img src="{{ site.baseurl }}/images/logo_sogang.png"
-         alt="Sogang University"
-         style="width: 150px; max-width: 100%; height: auto; margin-top: 10px;">
-  </a>
-</div>
+    <div class="ailab-footer-grid">
 
-        <div class="col-sm-4">
-          <p>
-            <strong>Affiliation</strong><br>
-            Department of Computer Science &amp; Engineering<br>
-            <a href="https://www.sogang.ac.kr/">Sogang University</a>
-          </p>
-        </div>
+      <!-- Copyright -->
+      <div class="footer-column">
 
-        <div class="col-sm-4">
-          <p>
-            <strong>Contact</strong><br>
-            35 Baekbeom-ro, Mapo-gu<br>
-            Seoul, 04107, Republic of Korea<br>
-            Tel: +82-2-705-8924<br>
-            Email: <a href="mailto:kimjihwan@sogang.ac.kr">kimjihwan@sogang.ac.kr</a>
-          </p>
-        </div>
+        <h4>Auditory Intelligence Lab</h4>
+
+        <p>
+          &copy; {{ site.time | date: '%Y' }} Auditory Intelligence Lab.<br>
+          All rights reserved.<br>
+          Powered by <a href="https://jekyllrb.com">Jekyll</a>.
+        </p>
+
+        <a href="https://www.sogang.ac.kr/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <img class="footer-university-logo"
+               src="{{ site.baseurl }}/images/logo_sogang.png"
+               alt="Sogang University">
+
+        </a>
 
       </div>
+
+      <!-- Affiliation -->
+      <div class="footer-column">
+
+        <h4>Affiliation</h4>
+
+        <p>
+          Department of Computer Science &amp; Engineering<br>
+          <a href="https://www.sogang.ac.kr/">Sogang University</a>
+        </p>
+
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-column">
+
+        <h4>Contact</h4>
+
+        <p>
+          35 Baekbeom-ro, Mapo-gu<br>
+          Seoul, 04107, Republic of Korea
+        </p>
+
+        <p>
+          Tel: <a href="tel:+8227058924">+82-2-705-8924</a><br>
+          Email: <a href="mailto:kimjihwan@sogang.ac.kr">kimjihwan@sogang.ac.kr</a>
+        </p>
+
+      </div>
+
     </div>
+
   </div>
-</div>
+
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
