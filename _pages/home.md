@@ -29,8 +29,3 @@ We aim to develop intelligent systems that can perceive, understand, and interac
 </figure>
 
 
-<figure style="text-align: center; margin: 40px 0;">
-  <a href="https://www.sogang.ac.kr/" target="_blank" rel="noopener noreferrer">
-    <img src="{{ site.baseurl }}/images/logo_sogang.png" alt="Sogang University" style="width: 200px; max-width: 100%;">
-  </a>
-</figure>
