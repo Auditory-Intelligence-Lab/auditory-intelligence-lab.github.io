@@ -41,5 +41,4 @@ permalink: /team/
 | TBD | TBD | TBD |
 | TBD | TBD | TBD |
 
-## Administrative Support
-<a href="mailto:Rijsewijk@Physics.LeidenUniv.nl">Ellie van Rijsewijk</a> is helping us (and other groups) with administration.
+
