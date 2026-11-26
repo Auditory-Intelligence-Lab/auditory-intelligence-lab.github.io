@@ -1,7 +1,7 @@
 ---
-title: "Allan Lab - Home"
+title: "Auditory Intelligence Lab - Home"
 layout: homelay
-excerpt: "Allan Lab at Leiden University &rarr; LMU."
+excerpt: "Auditory Intelligence Lab at Sogang University."
 sitemap: false
 permalink: /
 ---
