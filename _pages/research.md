@@ -1,3 +1,11 @@
+---
+title: "Auditory Intelligence Lab - Research"
+layout: textlay
+excerpt: "Auditory Intelligence Lab - Research"
+sitemap: false
+permalink: /research/
+---
+
 # Research
 
 ## 1. Sound World Model for Physical AI
