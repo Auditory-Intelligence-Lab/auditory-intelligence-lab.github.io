@@ -1,47 +1,133 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </button>
-	
-    <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/" style="display: flex; align-items: center; gap: 11px;">
-    Auditory Intelligence Lab
-    <img src="{{ site.baseurl }}/images/logo_ailabs.png" alt="Lab Logo" style="height: 35px; width: auto; margin: 0;">
-</a>
-	</div>
-	<div class="collapse navbar-collapse" id="navbar-collapse-1">
-	  <ul class="nav navbar-nav navbar-right">
-		<li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
-		<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    Team <span class="caret"></span>
-  </a>
+<header class="ailab-header">
+  <div class="container-fluid ailab-header-inner">
 
-  <ul class="dropdown-menu">
-    <li><a href="{{ site.baseurl }}/team/">Professor</a></li>
-    <li><a href="{{ site.baseurl }}/team/members/">Current Members</a></li>
-    <li><a href="{{ site.baseurl }}/team/alumni/">Alumni</a></li>
-  </ul>
-</li>
-		<li><a href="{{ site.url }}{{ site.baseurl }}/publications">Publications</a></li>
-		<li><a href="{{ site.url }}{{ site.baseurl }}/research">Research</a></li>
-		<li><a href="{{ site.baseurl }}/projects/">Projects</a></li>
-		<li><a href="{{ site.baseurl }}/awards/">Awards</a></li>
-        <li><a href="{{ site.baseurl }}/resources/">Research Resources</a></li>
-	<!-- li><a href="{{ site.url }}{{ site.baseurl }}/pictures">(Pics)</a></li> -->	
-	  </ul>
-	</div>
+    <!-- Brand -->
+    <a class="ailab-brand" href="{{ site.baseurl }}/">
+      <img src="{{ site.baseurl }}/images/logo_ailabs.png"
+           alt="AILab Logo">
+
+      <div class="ailab-brand-text">
+        <span class="brand-name">Auditory Intelligence Lab</span>
+        <span class="brand-university">Sogang University</span>
+      </div>
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button type="button"
+            class="ailab-menu-toggle"
+            aria-label="Toggle navigation"
+            aria-controls="ailab-navigation"
+            aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="ailab-navigation"
+         id="ailab-navigation"
+         aria-label="Main navigation">
+
+      <a href="{{ site.baseurl }}/"
+         {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>
+        Home
+      </a>
+
+      {% assign team_prefix = page.url | slice: 0, 6 %}
+
+      <details class="ailab-dropdown {% if team_prefix == '/team/' %}active{% endif %}">
+        <summary>Team <span class="nav-chevron"></span></summary>
+
+        <div class="ailab-dropdown-menu">
+
+          <a href="{{ site.baseurl }}/team/"
+             {% if page.url == '/team/' %}class="active" aria-current="page"{% endif %}>
+            Professor
+          </a>
+
+          <a href="{{ site.baseurl }}/team/members/"
+             {% if page.url == '/team/members/' %}class="active" aria-current="page"{% endif %}>
+            Current Members
+          </a>
+
+          <a href="{{ site.baseurl }}/team/alumni/"
+             {% if page.url == '/team/alumni/' %}class="active" aria-current="page"{% endif %}>
+            Alumni
+          </a>
+
+        </div>
+      </details>
+
+      <a href="{{ site.baseurl }}/publications/"
+         {% if page.url == '/publications/' %}class="active" aria-current="page"{% endif %}>
+        Publications
+      </a>
+
+      <a href="{{ site.baseurl }}/research/"
+         {% if page.url == '/research/' %}class="active" aria-current="page"{% endif %}>
+        Research
+      </a>
+
+      <a href="{{ site.baseurl }}/projects/"
+         {% if page.url == '/projects/' %}class="active" aria-current="page"{% endif %}>
+        Projects
+      </a>
+
+      <a href="{{ site.baseurl }}/awards/"
+         {% if page.url == '/awards/' %}class="active" aria-current="page"{% endif %}>
+        Awards
+      </a>
+
+      <a href="{{ site.baseurl }}/resources/"
+         {% if page.url == '/resources/' %}class="active" aria-current="page"{% endif %}>
+        Research Resources
+      </a>
+
+    </nav>
   </div>
-</div>
+</header>
 
-<style>
-@media (min-width: 768px) {
-    .navbar .dropdown:hover > .dropdown-menu {
-        display: block;
+<script>
+(function () {
+    const toggle = document.querySelector('.ailab-menu-toggle');
+    const navigation = document.querySelector('.ailab-navigation');
+    const dropdown = document.querySelector('.ailab-dropdown');
+
+    function closeMenu() {
+        navigation.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        dropdown.open = false;
     }
-}
-</style>
+
+    toggle.addEventListener('click', function () {
+        const isOpen = navigation.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+
+        if (!isOpen) {
+            dropdown.open = false;
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!dropdown.contains(event.target)) {
+            dropdown.open = false;
+        }
+
+        if (!event.target.closest('.ailab-header')) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            if (dropdown.open) {
+                dropdown.open = false;
+                dropdown.querySelector('summary').focus();
+            } else if (navigation.classList.contains('is-open')) {
+                closeMenu();
+                toggle.focus();
+            }
+        }
+    });
+})();
+</script>
