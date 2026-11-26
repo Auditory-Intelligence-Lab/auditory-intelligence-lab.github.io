@@ -8,7 +8,7 @@ permalink: /team/
 <div class="row" markdown="0">
 
   <div class="col-sm-3">
-    <img src="{{ site.baseurl }}/images/prof.jpg"
+    <img src="{{ site.baseurl }}/images/prof.png"
          alt="Professor Ji-Hwan Kim"
          style="width: 100%; max-width: 230px; border-radius: 5px;">
   </div>
