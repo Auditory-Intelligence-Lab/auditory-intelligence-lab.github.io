@@ -11,18 +11,21 @@ permalink: /team/
 
 ## Ph.D.
 | Name | Start Date | Research Interest |
+| --- | --- | --- |
 | SeungHee Ma | 20??.?? | Continual Learning, Speech LLM |
 | NamHyun Cho | 20??.?? | TBD |
 
 
 ## Master Students
 | Name | Start Date | Research Interest |
+| --- | --- | --- |
 | GyuTae Park | 2026.03 | Speech LLM |
 | NamHyun Cho | 2026.09 | Audio Generation, Spatial Audio |
 
 
 ## Undergraduate Students
 | Name | Start Date | Research Interest |
+| --- | --- | --- |
 | DongHwan Jang | 2026.07 | Audio Generation |
 | DongYoung Kim | 2026.09 | Sound World Model |
 
