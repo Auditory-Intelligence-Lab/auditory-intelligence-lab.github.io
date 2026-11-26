@@ -6,13 +6,21 @@ sitemap: false
 permalink: /
 ---
 
-**News: Our group moved to the University of Munich (LMU)!** Join us! 
+<div style="font-size: 17px; line-height: 1.8; text-align: justify; margin: 30px 0;">
 
-We are a dynamic research group at [LMU physics](https://www.physik.lmu.de/en/index.html) and at the [Leiden Institute of Physics](http://www.physics.leidenuniv.nl/). 
+<p>
+The <strong>Auditory Intelligence Lab (AILab)</strong> at Sogang University conducts research on artificial intelligence for speech, audio, and multimodal understanding.
+</p>
 
-We have two overarching goals: first, 
-**to understand quantum materials**, including strange metals, high-temperature superconductors, and quantum critical electron matter. Second, **to make novel and useful materials** that never existed before, like possible room-temperature superconductors. 
-To achieve these goals, we develop new quantum sensing and quantum imaging instrumentation to obtain the key quantum mechanical degrees of freedom. We want to build the perfect instruments to answer the scientific questions we deem most important. 
+<p>
+Our research focuses on Sound World Models for Physical AI, Speech-LLMs, On-device AI, Multimodal Audio Generation, Explainable AI, and End-to-End Automatic Speech Recognition.
+</p>
+
+<p>
+We aim to develop intelligent systems that can perceive, understand, and interact with the real world through speech and sound.
+</p>
+
+</div>
 
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
     <!-- Menu -->
