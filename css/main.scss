@@ -1402,3 +1402,351 @@ body > .container-fluid .research-sidebar a.active {
         transition: none;
     }
 }
+
+/* =========================================
+   AILab Publications Page v1.0
+   ========================================= */
+
+
+/* 1. Page Header */
+
+.publication-page-header {
+    margin-bottom: 35px;
+}
+
+.publication-page-header h1 {
+    margin-bottom: 16px;
+}
+
+.publication-heading-line {
+    width: 50px;
+    height: 4px;
+    background-color: var(--ailab-yellow);
+    margin-bottom: 20px;
+}
+
+.publication-page-header p {
+    color: var(--ailab-gray-500);
+    font-size: 17px;
+}
+
+
+/* 2. Filter Panel */
+
+.publication-filter {
+    background-color: var(--ailab-gray-50);
+    border: 1px solid var(--ailab-gray-200);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.publication-filter-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 20px;
+}
+
+.publication-filter label {
+    display: block;
+    color: var(--ailab-gray-700);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+/* 3. Search Input */
+
+.publication-search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: var(--ailab-white);
+    border: 1px solid var(--ailab-gray-300);
+    border-radius: var(--ailab-radius);
+    padding: 0 15px;
+}
+
+.publication-search-box svg {
+    width: 20px;
+    height: 20px;
+    color: var(--ailab-gray-500);
+    flex-shrink: 0;
+}
+
+.publication-search-box input {
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: var(--ailab-gray-700);
+    font-size: 14px;
+}
+
+.publication-search-box:focus-within {
+    border-color: var(--ailab-yellow);
+    box-shadow: 0 0 0 3px var(--ailab-yellow-light);
+}
+
+
+/* 4. Year Select */
+
+.publication-year select {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 12px;
+
+    background-color: var(--ailab-white);
+    color: var(--ailab-gray-700);
+
+    border: 1px solid var(--ailab-gray-300);
+    border-radius: var(--ailab-radius);
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.publication-year select:focus {
+    outline: 2px solid var(--ailab-yellow);
+    outline-offset: 2px;
+}
+
+
+/* 5. Result Count and Reset */
+
+.publication-filter-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#publication-count {
+    color: var(--ailab-gray-500);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#publication-reset {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    background: transparent;
+    border: none;
+
+    color: var(--ailab-gray-500);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#publication-reset svg {
+    width: 15px;
+    height: 15px;
+}
+
+#publication-reset:hover {
+    color: #806400;
+}
+
+
+/* 6. Year Headings */
+
+.publication-list h2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    color: var(--ailab-gray-700);
+    font-size: 30px;
+    font-weight: 700;
+
+    margin: 45px 0 25px;
+    scroll-margin-top: 110px;
+}
+
+.publication-list h2::before {
+    content: "";
+    width: 4px;
+    height: 28px;
+    background-color: var(--ailab-yellow);
+    border-radius: 2px;
+}
+
+.publication-list h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--ailab-gray-200);
+}
+
+
+/* 7. Publication Cards */
+
+.publication-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.publication-list li {
+    padding: 24px;
+    margin-bottom: 14px;
+
+    background-color: var(--ailab-white);
+
+    border: 1px solid var(--ailab-gray-200);
+    border-left: 3px solid var(--ailab-gray-200);
+    border-radius: var(--ailab-radius);
+
+    color: var(--ailab-gray-500);
+    font-size: 15px;
+    line-height: 1.9;
+
+    overflow-wrap: anywhere;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.publication-list li:hover {
+    border-left-color: var(--ailab-yellow);
+    box-shadow: 0 4px 15px rgba(55, 65, 81, 0.05);
+}
+
+.publication-list li p {
+    margin: 0;
+}
+
+
+/* Paper Title */
+
+.publication-list li strong {
+    display: inline-block;
+
+    color: var(--ailab-gray-700);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    margin-bottom: 6px;
+}
+
+
+/* Conference and Journal */
+
+.publication-list li em {
+    color: #806400;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* 8. DOI Links */
+
+body > .container-fluid .publication-list a {
+    display: inline-block;
+
+    background-color: var(--ailab-gray-50);
+    border: 1px solid var(--ailab-gray-200);
+    border-radius: 4px;
+
+    padding: 3px 12px;
+    margin-top: 10px;
+
+    color: var(--ailab-gray-700);
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+body > .container-fluid .publication-list a:hover {
+    background-color: var(--ailab-yellow-light);
+    border-color: var(--ailab-yellow);
+}
+
+
+/* 9. Empty Results */
+
+#publication-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ailab-gray-500);
+}
+
+#publication-empty svg {
+    width: 45px;
+    height: 45px;
+    stroke-width: 1.3;
+    margin-bottom: 10px;
+}
+
+#publication-empty h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+
+/* 10. Filter Visibility */
+
+.publication-list [hidden],
+.publication-filter[hidden],
+#publication-empty[hidden] {
+    display: none !important;
+}
+
+
+/* 11. Mobile */
+
+@media (max-width: 600px) {
+
+    .publication-filter {
+        padding: 18px;
+    }
+
+    .publication-filter-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .publication-list h2 {
+        font-size: 25px;
+    }
+
+    .publication-list li {
+        padding: 18px;
+        font-size: 14px;
+    }
+
+    .publication-list li strong {
+        font-size: 16px;
+    }
+
+    .publication-list li em {
+        font-size: 13px;
+    }
+
+    .publication-page-header p {
+        font-size: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .publication-list li {
+        transition: none;
+    }
+}
