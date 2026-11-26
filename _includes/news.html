@@ -1,11 +1,48 @@
+<style>
+.news-row {
+    display: flex;
+    align-items: baseline;
+    gap: 25px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
 
-<div class="well">
-<h4>News</h4>
+.news-date {
+    flex-shrink: 0;
+    width: 130px;
+    color: #777;
+    font-weight: bold;
+}
 
-{% for article in site.data.news limit:9 %}
-<p>{{ article.date }}<br>{{ article.headline | markdownify}}</p>
+.news-content {
+    flex: 1;
+}
+
+.news-content p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .news-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+</style>
+
+<h2 style="margin-bottom: 25px;">News</h2>
+
+{% for article in site.data.news limit:5 %}
+
+<div class="news-row">
+    <div class="news-date">{{ article.date }}</div>
+    <div class="news-content">
+        {{ article.headline | markdownify }}
+    </div>
+</div>
+
 {% endfor %}
 
-<h4><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">... see all News</a></h4>
-
-    </div>
+<p style="text-align: right; margin-top: 20px;">
+    <a href="{{ site.baseurl }}/allnews.html">View all News &rarr;</a>
+</p>
