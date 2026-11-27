@@ -1,0 +1,118 @@
+/* =========================================
+   AILab Projects Page
+   ========================================= */
+
+   .projects-page {
+
+    .projects-section {
+        margin-top: 50px;
+    }
+
+    .projects-section h2 {
+        margin-bottom: 25px;
+    }
+
+
+    /* Common Project Typography */
+
+    .project-title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.7;
+        margin: 0 0 8px;
+        overflow-wrap: anywhere;
+        word-break: keep-all;
+    }
+
+    .project-period {
+        color: var(--ailab-gray-500);
+        font-size: 14px;
+        font-variant-numeric: tabular-nums;
+        line-height: 1.7;
+        margin: 0 0 8px;
+    }
+
+    .project-agency {
+        color: var(--ailab-gray-500);
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* Ongoing Projects */
+
+    .ongoing-projects {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .ongoing-project {
+        background-color: #F6F7F8;
+        border-radius: 6px;
+        padding: 24px 28px;
+    }
+
+
+    /* Past Projects */
+
+    .past-projects {
+        border-top: 1px solid var(--ailab-gray-200);
+    }
+
+    .past-project {
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr);
+        align-items: start;
+        gap: 25px;
+
+        padding: 22px 0;
+        border-bottom: 1px solid var(--ailab-gray-200);
+    }
+
+    .past-project .project-period {
+        padding-top: 3px;
+        margin-bottom: 0;
+    }
+
+    .project-content {
+        min-width: 0;
+    }
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 767px) {
+
+    .projects-page {
+
+        .projects-section {
+            margin-top: 35px;
+        }
+
+        .ongoing-project {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 16px;
+        }
+
+        .project-period,
+        .project-agency {
+            font-size: 13px;
+        }
+
+        .past-project {
+            grid-template-columns: 1fr;
+            gap: 8px;
+            padding: 20px 0;
+        }
+
+    }
+
+}

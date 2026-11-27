@@ -1,0 +1,275 @@
+/* =========================================
+   AILab Research Resources
+   ========================================= */
+
+
+/* Page Header */
+
+.resources-header {
+    margin-bottom: 35px;
+}
+
+.resources-header h1 {
+    margin-bottom: 12px;
+}
+
+.resources-header > p {
+    color: var(--ailab-gray-500);
+    font-size: 17px;
+}
+
+
+/* Search */
+
+.resource-search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    max-width: 650px;
+    padding: 0 16px;
+    margin-top: 25px;
+
+    border: 1px solid var(--ailab-gray-300);
+    border-radius: 6px;
+    background-color: var(--ailab-white);
+}
+
+.resource-search-box svg {
+    width: 19px;
+    height: 19px;
+    color: var(--ailab-gray-500);
+    flex-shrink: 0;
+}
+
+.resource-search-box input {
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+.resource-search-box:focus-within {
+    border-color: var(--ailab-gray-500);
+}
+
+
+/* Layout */
+
+.resources-layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    align-items: start;
+    gap: 40px;
+}
+
+
+/* Sidebar */
+
+.resources-sidebar {
+    position: sticky;
+    top: 110px;
+
+    padding-right: 20px;
+    border-right: 1px solid var(--ailab-gray-200);
+
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+}
+
+.resources-sidebar h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ailab-gray-500);
+    margin: 0 0 18px;
+}
+
+body > .container-fluid .resources-sidebar a {
+    display: block;
+
+    padding: 11px 12px;
+    margin-bottom: 5px;
+
+    border-left: 3px solid transparent;
+
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ailab-gray-500);
+    text-decoration: none;
+}
+
+body > .container-fluid .resources-sidebar a:hover {
+    color: var(--ailab-gray-700);
+}
+
+body > .container-fluid .resources-sidebar a.active {
+    border-left-color: var(--ailab-yellow);
+    color: var(--ailab-gray-700);
+    font-weight: 600;
+}
+
+
+/* Paper List */
+
+.resource-list {
+    min-width: 0;
+}
+
+.resource-list h2 {
+    font-size: 25px;
+    line-height: 1.5;
+
+    margin: 50px 0 20px;
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid var(--ailab-gray-200);
+
+    scroll-margin-top: 110px;
+}
+
+.resource-list h2:first-child {
+    margin-top: 0;
+}
+
+.resource-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-list li {
+    color: var(--ailab-gray-500);
+
+    padding: 20px 0;
+    border-bottom: 1px solid var(--ailab-gray-200);
+
+    font-size: 14px;
+    line-height: 1.85;
+    overflow-wrap: anywhere;
+}
+
+.resource-list li p {
+    margin: 0;
+}
+
+
+/* Research Keyword */
+
+.resource-list li strong {
+    color: #806400;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* Paper Title */
+
+.resource-paper-title {
+    color: var(--ailab-gray-700);
+    font-weight: 500;
+}
+
+
+/* Paper Links */
+
+body > .container-fluid .resource-paper-link {
+    display: inline-block;
+
+    margin-top: 8px;
+    padding: 2px 10px;
+
+    border: 1px solid var(--ailab-gray-300);
+    border-radius: 4px;
+
+    color: var(--ailab-gray-700);
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+body > .container-fluid .resource-paper-link:hover {
+    border-color: var(--ailab-yellow);
+}
+
+
+/* Search Results */
+
+.resource-empty {
+    color: var(--ailab-gray-500);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.resource-search-box[hidden],
+.resource-list [hidden],
+.resources-sidebar [hidden] {
+    display: none !important;
+}
+
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .resources-layout {
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .resource-list h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+    .resources-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .resources-sidebar {
+        position: static;
+        padding-right: 0;
+        padding-bottom: 20px;
+
+        border-right: none;
+        border-bottom: 1px solid var(--ailab-gray-200);
+
+        max-height: none;
+        overflow: visible;
+    }
+
+    .resources-sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .resources-sidebar h4 {
+        grid-column: 1 / -1;
+        margin-bottom: 10px;
+    }
+
+    body > .container-fluid .resources-sidebar a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .resource-list li {
+        font-size: 14px;
+        padding: 18px 0;
+    }
+
+    .resource-list h2 {
+        font-size: 21px;
+    }
+}

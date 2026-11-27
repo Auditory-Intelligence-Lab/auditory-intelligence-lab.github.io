@@ -1,0 +1,77 @@
+- year: "2023"
+  events:
+
+    - title: "2023년 한국어 AI 경진대회"
+      organizer: "한국지능정보사회진흥원(NIA)"
+      awards:
+
+        - prize: "학생부 최우수상"
+          track: "Track 1. 소리로 더 가까이, 노인 및 소아 계층 특화 음성인식 부문"
+          members: "강한이, 노영현"
+
+        - prize: "장려상"
+          track: "Track 2-1. 상담 음성인식"
+          members: "오준석, 김민서, 남주형"
+
+
+- year: "2022"
+  events:
+
+    - title: "2022 한국어 인공지능 경진대회"
+      date: "2022.10.07"
+      organizer: "한국지능정보사회진흥원(NIA)"
+      awards:
+
+        - prize: "최우수상 / 현대자동차그룹 사장상 (1위)"
+          track: "기업현안 (차량음성)"
+          team: "pony"
+          members: "박호성, 조은수, 정윤서"
+
+        - prize: "최우수상 / 네이버 대표 (1위)"
+          track: "기업현안 (회의음성)"
+          team: "SGCSE"
+          members: "오준석, 김하영"
+
+        - prize: "특별상 (데이터품질리뷰상)"
+          track: "데이터리뷰"
+          team: "서강프렌즈"
+          members: "김민서, 남주형"
+
+
+- year: "2021"
+  events:
+
+    - title: "숫자가 포함된 패턴발화 음성 데이터셋을 활용한 음절인식률 측정 알고리즘 개발 대회"
+      date: "2021.12.07"
+      organizer: "KT alpha"
+      awards:
+
+        - prize: "최우수상 (1위)"
+          members: "박호성, 오준석, 조은수"
+
+    - title: "인공지능 학습용 데이터 해커톤 대회"
+      date: "2021.01.29"
+      organizer: "NHN컨소시엄"
+      awards:
+
+        - prize: "최우수상"
+          members: "손현수, 김규진"
+
+
+- year: "2020"
+  events:
+
+    - title: "Future Finance AI Challenge"
+      date: "2020.09.22"
+      organizer: "KB금융그룹 / 금융감독원"
+      awards:
+
+        - prize: "Google Cloud상"
+          members: "박호성, 손현수"
+
+    - title: "2020 한국컴퓨터종합학술대회 우수논문상"
+      date: "2020.07"
+      awards:
+
+        - prize: "우수논문상"
+          members: "박호성"

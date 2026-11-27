@@ -1,0 +1,134 @@
+ongoing:
+
+  - title: "[BK21 Four] 세계 최고 수준의 실무형 빅데이터 융복합 인재 양성 사업"
+    period: "2020 – Present"
+    agency: "한국연구재단"
+    type: "지원 기관"
+
+  - title: "미래형자동차 핵심기술 R&D 전문인력양성"
+    period: "2022 – Present"
+    agency: "한국산업기술진흥원"
+    type: "지원 기관"
+
+  - title: "대화 기반 설명가능성을 멀티모달로 제공하는 인공지능 기술 개발"
+    period: "2022 – Present"
+    agency: "과학기술정보통신부"
+    type: "지원 기관"
+
+  - title: "멀티모달 AI 에이전트 시대에 적합한 실무형 AI인재 육성 프로그램"
+    period: "2025 – Present"
+    agency: "정보통신기획평가원"
+    type: "지원 기관"
+
+  - title: "인공지능혁신대학원"
+    period: "2026.09 – Present"
+    agency: "정보통신기획평가원"
+    type: "지원 기관"
+
+  - title: "음색 보존형 발성 오류 교정 음성 생성을 위한 정보이론적 잠재 표현 분리"
+    period: "2025.09 – Present"
+    agency: "한국연구재단"
+    type: "지원 기관"
+
+
+past:
+
+  - title: "인공지능 혁신 허브 연구 개발"
+    period: "2021 – 2024"
+    agency: "과학기술정보통신부"
+    type: "지원 기관"
+
+  - title: "E2E 음성인식 과제"
+    period: "2024 – 2025.04"
+    agency: "스마일게이트"
+    type: "산학 기관"
+
+  - title: "전화용 E2E 음성인식 과제"
+    period: "2024.04 – 2024.12"
+    agency: "롯데이노베이트"
+    type: "산학 기관"
+
+  - title: "한국어 말하기 평가 자동평가 과제"
+    period: "2024.05 – 2024.12"
+    agency: "문체부 용역과제"
+    type: "산학 기관"
+
+  - title: "무분별적 유해성 미디어 배포 문제 해결을 위한 지능적 분석/분류 기반 콘텐츠 등급분류 기술"
+    period: "2022 – 2024"
+    agency: "과학기술정보통신부"
+    type: "지원 기관"
+
+  - title: "한국어 말하기 평가 자동평가 과제"
+    period: "2023.05 – 2023.12"
+    agency: "문체부 용역과제"
+    type: "산학 기관"
+
+  - title: "Localized Attention Mechanism이 적용된 External Memory 기반 On-Device Signal-to-Character (S2C) 실시간 음성인식"
+    period: "2020 – 2022"
+    agency: "과학기술정보통신부"
+    type: "지원 기관"
+
+  - title: "이종 정보 활용 및 데이터 융합을 통한(통합) 데이터 증식 기술 개발"
+    period: "2020 – 2021"
+    agency: "과학기술정보통신부 / 정보통신기획평가원 및 (주)엔에이치엔다이퀘스트 관련"
+    type: "지원 기관"
+
+  - title: "비디오 튜링 테스트를 통과할 수준의 비디오 스토리 이해 기반의 질의응답 기술 개발"
+    period: "2017 – 2021"
+    agency: "과학기술정보통신부 (서울대학)"
+    type: "지원 기관"
+
+  - title: "자율지능 디지털 동반자 프레임워크 및 응용 연구개발"
+    period: "2020.01.01 – 2020.12.31"
+    agency: "과학기술정보통신부"
+    type: "지원 기관"
+
+  - title: "데이터 변화에 강건한 딥러닝 기반 음향 분석 알고리즘 연구"
+    period: "2020.05.15 – 2020.11.30"
+    agency: "한국전자통신연구원"
+    type: "지원 기관"
+
+  - title: "(지능정보-총괄/1세부) 자율지능 디지털 동반자 프레임워크 및 응용 연구개발"
+    period: "2020 – 2020"
+    agency: "과학기술정보통신부 (한국전자기술연구원)"
+    type: "지원 기관"
+
+  - title: "Deep Neural Network 음향모델 적응을 위한 i-Vector 기반 cluster adaptive transfer learning"
+    period: "2017 – 2020"
+    agency: "연구재단"
+    type: "지원 기관"
+
+  - title: "실내용 음성대화 로봇을 위한 원거리 음성인식 기술 및 멀티 태스크 대화처리 기술 개발"
+    period: "2016.05.01 – 2020.04.30"
+    agency: "한국산업기술평가관리원"
+    type: "지원 기관"
+
+  - title: "차량 주행환경에서 90% 이상 대화음성인식이 가능한 음성인식 요소기술 개발 및 대화형 컴패니언 시스템 개발"
+    period: "2017.09.01 – 2019.12.31"
+    agency: "한국산업기술평가관리원"
+    type: "지원 기관"
+
+  - title: "모바일 플랫폼을 위한 딥러닝 알고리즘 최적화 연구"
+    period: "2019.05.01 – 2019.10.31"
+    agency: "한국전자통신연구원"
+    type: "지원 기관"
+
+  - title: "빅데이터 활용을 위한 창의적 기반기술 연구인력 양성팀"
+    period: "2013.09.01 – 2019.02.28"
+    agency: "한국연구재단"
+    type: "지원 기관"
+
+  - title: "퍼스널 미디어가 연결/공유/결합하여 재구성 가능케 하는 복합 모달리티 기반 미디어 응용 프레임워크"
+    period: "2015.03.01 – 2018.02.28"
+    agency: "한국전자통신연구원"
+    type: "지원 기관"
+
+  - title: "Continuous Vector Space 상에서의 Word Representation 학습 및 이를 이용한 DNN 기반 언어모델 구현"
+    period: "2014.05.01 – 2017.04.30"
+    agency: "한국연구재단"
+    type: "지원 기관"
+
+  - title: "치매환자 지원을 위한 로봇 대화 인터페이스 개발"
+    period: "2016.03.01 – 2017.02.28"
+    agency: "한국과학기술연구원"
+    type: "지원 기관"

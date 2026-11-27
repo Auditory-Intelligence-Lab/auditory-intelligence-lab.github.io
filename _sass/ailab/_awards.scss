@@ -1,0 +1,172 @@
+/* =========================================
+   AILab Awards Page
+   ========================================= */
+
+   .awards-page {
+
+    .awards-timeline {
+        margin-top: 40px;
+    }
+
+
+    /* Year Section */
+
+    .awards-year-section {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        align-items: start;
+        gap: 40px;
+
+        padding: 35px 0;
+        border-bottom: 1px solid var(--ailab-gray-200);
+    }
+
+    .awards-year-section:first-child {
+        padding-top: 0;
+    }
+
+    .awards-year-section:last-child {
+        border-bottom: none;
+    }
+
+
+    /* Year Heading */
+
+    .awards-year h2 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 0 0 15px;
+    }
+
+    .awards-year::after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 3px;
+        background-color: var(--ailab-yellow);
+    }
+
+
+    /* Event */
+
+    .awards-events {
+        min-width: 0;
+    }
+
+    .award-event + .award-event {
+        border-top: 1px solid var(--ailab-gray-200);
+        padding-top: 28px;
+        margin-top: 28px;
+    }
+
+    .award-event-title {
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 1.5;
+        margin: 0 0 10px;
+
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+    }
+
+    .award-event-meta {
+        color: var(--ailab-gray-500);
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0 0 22px;
+    }
+
+
+    /* Award Results */
+
+    .award-results {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+    }
+
+    .award-result {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 22px;
+    }
+
+    .award-result:last-child {
+        margin-bottom: 0;
+    }
+
+    .award-result::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+
+        width: 6px;
+        height: 6px;
+
+        background-color: var(--ailab-yellow);
+        border-radius: 50%;
+    }
+
+    .award-prize {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 0 0 6px;
+        color: var(--ailab-gray-700);
+    }
+
+    .award-track {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0 0 4px;
+    }
+
+    .award-members {
+        font-size: 14px;
+        color: var(--ailab-gray-500);
+        line-height: 1.7;
+        margin: 0;
+    }
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 767px) {
+
+    .awards-page {
+
+        .awards-year-section {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            padding: 28px 0;
+        }
+
+        .awards-year h2 {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .award-event-title {
+            font-size: 18px;
+        }
+
+        .award-prize {
+            font-size: 16px;
+        }
+
+        .award-track,
+        .award-members {
+            font-size: 14px;
+        }
+
+        .award-event-meta {
+            font-size: 13px;
+        }
+
+    }
+
+}

@@ -6,107 +6,112 @@ sitemap: false
 permalink: /awards/
 ---
 
-<style>
-.awards-list h2 {
-    margin-top: 45px;
-    margin-bottom: 20px;
-    font-size: 25px;
-    font-weight: bold;
-}
+<div class="awards-page" markdown="0">
 
-.awards-list {
-    font-size: 16px;
-    line-height: 1.9;
-}
+  <h1>Awards</h1>
 
-.awards-list li {
-    margin-bottom: 8px;
-}
+  <div class="awards-timeline">
 
-.awards-list hr {
-    margin: 30px 0;
-}
-</style>
+    {% for group in site.data.awards %}
 
-# Awards
+    <section class="awards-year-section">
 
-<div class="awards-list" markdown="1">
+      <!-- Year -->
 
-## 2023년 한국어 AI 경진대회
+      <div class="awards-year">
+        <h2>{{ group.year }}</h2>
+      </div>
 
-**주관:** 한국지능정보사회진흥원(NIA)
 
-- Track 1. 소리로 더 가까이, 노인 및 소아 계층 특화 음성인식 부문
-  - **학생부 최우수상**
-  - 참여 학생: 강한이, 노영현
+      <!-- Events -->
 
-- Track 2-1. 상담 음성인식
-  - **장려상**
-  - 참여 학생: 오준석, 김민서, 남주형
+      <div class="awards-events">
 
----
+        {% for event in group.events %}
 
-## 2022 한국어 인공지능 경진대회
+        <article class="award-event">
 
-*2022.10.07*
+          <h3 class="award-event-title">
+            {{ event.title | escape }}
+          </h3>
 
-**주관:** 한국지능정보사회진흥원(NIA)
+          {% if event.date or event.organizer %}
 
-- 기업현안 (차량음성)
-  - **최우수상 / 현대자동차그룹 사장상 (1위)**
-  - Team: pony
-  - 참여 학생: 박호성, 조은수, 정윤서
+          <p class="award-event-meta">
 
-- 기업현안 (회의음성)
-  - **최우수상 / 네이버 대표 (1위)**
-  - Team: SGCSE
-  - 참여 학생: 오준석, 김하영
+            {% if event.date %}
+              {{ event.date | escape }}
+            {% endif %}
 
-- 데이터리뷰
-  - **특별상 (데이터품질리뷰상)**
-  - Team: 서강프렌즈
-  - 참여 학생: 김민서, 남주형
+            {% if event.date and event.organizer %}
+              &nbsp;&middot;&nbsp;
+            {% endif %}
 
----
+            {% if event.organizer %}
+              {{ event.organizer | escape }}
+            {% endif %}
 
-## 숫자가 포함된 패턴발화 음성 데이터셋을 활용한 음절인식률 측정 알고리즘 개발 대회
+          </p>
 
-*2021.12.07*
+          {% endif %}
 
-**주관:** KT alpha
 
-- **최우수상 (1위)**
-- 참여 학생: 박호성, 오준석, 조은수
+          <!-- Award Details -->
 
----
+          <ul class="award-results">
 
-## 인공지능 학습용 데이터 해커톤 대회
+            {% for award in event.awards %}
 
-*2021.01.29*
+            <li class="award-result">
 
-**주관:** NHN컨소시엄
+              <h4 class="award-prize">
+                {{ award.prize | escape }}
+              </h4>
 
-- **최우수상**
-- 참여 학생: 손현수, 김규진
+              {% if award.track or award.team %}
 
----
+              <p class="award-track">
 
-## Future Finance AI Challenge
+                {% if award.track %}
+                  {{ award.track | escape }}
+                {% endif %}
 
-*2020.09.22*
+                {% if award.track and award.team %}
+                  &nbsp;&middot;&nbsp;
+                {% endif %}
 
-**주관:** KB금융그룹 / 금융감독원
+                {% if award.team %}
+                  Team {{ award.team | escape }}
+                {% endif %}
 
-- **Google Cloud상**
-- 참여 학생: 박호성, 손현수
+              </p>
 
----
+              {% endif %}
 
-## 2020 한국컴퓨터종합학술대회 우수논문상
+              {% if award.members %}
 
-*2020.07*
+              <p class="award-members">
+                {{ award.members | escape }}
+              </p>
 
-- **우수논문상**
-- 수상자: 박호성
+              {% endif %}
+
+            </li>
+
+            {% endfor %}
+
+          </ul>
+
+        </article>
+
+        {% endfor %}
+
+      </div>
+
+    </section>
+
+    {% endfor %}
+
+  </div>
 
 </div>
