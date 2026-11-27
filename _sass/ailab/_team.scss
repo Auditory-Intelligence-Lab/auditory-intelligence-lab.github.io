@@ -81,3 +81,139 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   Professor Profile
+   ========================================= */
+
+   .professor-profile {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    align-items: center;
+    gap: 45px;
+
+    background-color: #F5F6F7;
+    border-radius: 10px;
+    padding: 35px;
+    margin-top: 30px;
+}
+
+.professor-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 6px;
+}
+
+.professor-info {
+    min-width: 0;
+}
+
+.professor-info h2 {
+    font-size: 30px;
+    margin: 0 0 18px;
+}
+
+.professor-affiliation {
+    color: var(--ailab-gray-500);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+
+/* Contact Information */
+
+.professor-contact {
+    display: grid;
+    grid-template-columns: 75px minmax(0, 1fr);
+    gap: 9px 15px;
+
+    border-top: 1px solid var(--ailab-gray-200);
+    padding-top: 20px;
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.professor-contact dt {
+    font-weight: 600;
+}
+
+.professor-contact dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* Education & Work Experience */
+
+.professor-section {
+    margin-top: 55px;
+}
+
+.career-row {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 25px;
+
+    padding: 22px 0;
+    border-bottom: 1px solid var(--ailab-gray-200);
+}
+
+.career-date {
+    font-size: 14px;
+    color: var(--ailab-gray-500);
+    padding-top: 3px;
+    font-variant-numeric: tabular-nums;
+}
+
+.career-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.career-content p {
+    font-size: 15px;
+    color: var(--ailab-gray-500);
+    line-height: 1.8;
+    margin: 8px 0 0;
+}
+
+
+/* Responsive */
+
+@media (max-width: 767px) {
+
+    .professor-profile {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .professor-photo {
+        width: 180px;
+        max-width: 100%;
+    }
+
+    .professor-info h2 {
+        font-size: 25px;
+    }
+
+    .professor-contact {
+        font-size: 14px;
+    }
+
+    .career-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 20px 0;
+    }
+
+    .career-content h3 {
+        font-size: 17px;
+    }
+}

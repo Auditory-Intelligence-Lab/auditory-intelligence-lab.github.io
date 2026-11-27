@@ -5,77 +5,186 @@ team_tab: professor
 permalink: /team/
 ---
 
-# Professor
+<div class="professor-page" markdown="0">
 
-<div class="row" markdown="0">
+  <h1>Professor</h1>
 
-  <div class="col-sm-3">
-    <img src="{{ site.baseurl }}/images/prof.png"
-         alt="Professor Ji-Hwan Kim"
-         style="width: 100%; max-width: 230px; border-radius: 5px;">
-  </div>
+  <!-- Professor Profile -->
 
-  <div class="col-sm-9">
+  <section class="professor-profile">
 
-    <h2>Ji-Hwan Kim (김지환)</h2>
+    <div class="professor-photo">
+      <img src="{{ site.baseurl }}/images/prof.png"
+           alt="Professor Ji-Hwan Kim">
+    </div>
 
-    <p>
-      Department of Computer Science &amp; Engineering<br>
-      Sogang University
-    </p>
+    <div class="professor-info">
 
-    <p>
-      <strong>Office:</strong> AS 713<br>
-      <strong>Phone:</strong> +82-2-705-8924<br>
-      <strong>Email:</strong>
-      <a href="mailto:kimjihwan@sogang.ac.kr">kimjihwan@sogang.ac.kr</a>
-    </p>
+      <h2>Ji-Hwan Kim (김지환)</h2>
 
-    <p>
-      <strong>Address:</strong><br>
-      35 Baekbeom-ro, Mapo-gu, Seoul, 04107, Republic of Korea
-    </p>
+      <p class="professor-affiliation">
+        Department of Computer Science &amp; Engineering<br>
+        Sogang University
+      </p>
 
-  </div>
+      <dl class="professor-contact">
+
+        <dt>Office</dt>
+        <dd>AS 713</dd>
+
+        <dt>Phone</dt>
+        <dd>+82-2-705-8924</dd>
+
+        <dt>Email</dt>
+        <dd>
+          <a href="mailto:kimjihwan@sogang.ac.kr">
+            kimjihwan@sogang.ac.kr
+          </a>
+        </dd>
+
+        <dt>Address</dt>
+        <dd>
+          35 Baekbeom-ro, Mapo-gu, Seoul,
+          04107, Republic of Korea
+        </dd>
+
+      </dl>
+
+    </div>
+
+  </section>
+
+
+  <!-- Education -->
+
+  <section class="professor-section">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="career-list">
+
+      <div class="career-row">
+
+        <div class="career-date">
+          1998.04 – 2001.11
+        </div>
+
+        <div class="career-content">
+          <h3>Ph.D. · University of Cambridge</h3>
+          <p>
+            Department of Engineering<br>
+            Machine Intelligence Laboratory<br>
+            Major: Speech Recognition
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="career-row">
+
+        <div class="career-date">
+          1996.03 – 1998.02
+        </div>
+
+        <div class="career-content">
+          <h3>M.E. · KAIST</h3>
+          <p>
+            Department of Computer Science<br>
+            Speech Interface Laboratory<br>
+            Major: Speaker Identification
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="career-row">
+
+        <div class="career-date">
+          1992.03 – 1996.02
+        </div>
+
+        <div class="career-content">
+          <h3>B.E. · KAIST</h3>
+          <p>
+            Department of Computer Science<br>
+            Major: Computer Science<br>
+            Minor: Industrial Management
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="career-row">
+
+        <div class="career-date">
+          1990.03 – 1992.02
+        </div>
+
+        <div class="career-content">
+          <h3>Seoul Science High School</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Work Experience -->
+
+  <section class="professor-section">
+
+    <h2 class="section-title">Work Experience</h2>
+
+    <div class="career-list">
+
+      <div class="career-row">
+
+        <div class="career-date">
+          2007.09 – Present
+        </div>
+
+        <div class="career-content">
+          <h3>Professor</h3>
+          <p>Sogang University</p>
+        </div>
+
+      </div>
+
+
+      <div class="career-row">
+
+        <div class="career-date">
+          2001.12 – 2007.08
+        </div>
+
+        <div class="career-content">
+          <h3>Chief &amp; Senior Research Engineer</h3>
+          <p>LG Electronics Institute of Technology</p>
+        </div>
+
+      </div>
+
+
+      <div class="career-row">
+
+        <div class="career-date">
+          2004.10 – 2004.11
+        </div>
+
+        <div class="career-content">
+          <h3>Visiting Scholar</h3>
+          <p>MIT Media Lab</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </div>
-
-<div style="margin-top: 50px;"></div>
-
-## Education
-
----
-
-- **Ph.D. (1998.04 – 2001.11)**
-  - University of Cambridge
-  - Department of Engineering
-  - Machine Intelligence Laboratory
-  - Major: Speech Recognition
-
-- **M.E. (1996.03 – 1998.02)**
-  - KAIST, Department of Computer Science
-  - Speech Interface Laboratory
-  - Major: Speaker Identification
-
-- **B.E. (1992.03 – 1996.02)**
-  - KAIST, Department of Computer Science
-  - Major: Computer Science
-  - Minor: Industrial Management
-
-- **Seoul Science High School (1990.03 – 1992.02)**
-
-<div style="margin-top: 50px;"></div>
-
-## Work Experience
-
----
-
-- **2007.09 – Present**
-  - Professor, Sogang University
-
-- **2001.12 – 2007.08**
-  - Chief & Senior Research Engineer
-  - LG Electronics Institute of Technology
-
-- **2004.10 – 2004.11**
-  - Visiting Scholar, MIT Media Lab
