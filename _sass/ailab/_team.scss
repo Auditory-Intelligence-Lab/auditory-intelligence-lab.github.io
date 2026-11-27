@@ -1,0 +1,83 @@
+/* =========================================
+   AILab Team Page v1.0
+   ========================================= */
+
+   .member-section {
+    margin-top: 50px;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background-color: var(--ailab-white);
+    border: 1px solid var(--ailab-gray-200);
+    border-radius: 8px;
+}
+
+.member-card .member-photo,
+.member-photo-placeholder {
+    width: 150px;
+    height: 180px;
+    border-radius: 6px;
+    margin: 0 0 20px;
+}
+
+.member-card .member-photo {
+    object-fit: cover;
+    object-position: center top;
+}
+
+.member-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ailab-gray-50);
+}
+
+.member-photo-placeholder svg {
+    width: 65px;
+    height: 65px;
+    color: var(--ailab-gray-300);
+    stroke-width: 1.4;
+}
+
+.member-card h3 {
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+.member-start {
+    font-size: 13px;
+    color: var(--ailab-gray-500);
+    margin-bottom: 15px;
+}
+
+.member-research {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ailab-gray-700);
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .member-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+}

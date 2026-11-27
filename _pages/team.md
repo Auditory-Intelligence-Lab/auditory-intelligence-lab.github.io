@@ -5,65 +5,60 @@ team_tab: members
 permalink: /team/members/
 ---
 
-<style>
-.member-list h2 {
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
+<div class="members-page" markdown="0">
 
-.member-list table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-}
+  <h1>Current Members</h1>
 
-.member-list th {
-    background-color: #f5f5f5;
-    padding: 15px;
-    text-align: left;
-}
+  {% for group in site.data.members %}
 
-.member-list td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
+  <section class="member-section">
 
-.member-list th:nth-child(1) {
-    width: 25%;
-}
+    <h2 class="section-title">
+      {{ group.group }}
+    </h2>
 
-.member-list th:nth-child(2) {
-    width: 20%;
-}
+    <div class="member-grid">
 
-.member-list th:nth-child(3) {
-    width: 55%;
-}
-</style>
+      {% for member in group.members %}
 
-# Current Members
+      <article class="member-card">
 
-<div class="member-list" markdown="1">
+        {% if member.photo and member.photo != "" %}
 
-## Ph.D. Students
+        <img class="member-photo"
+             src="{{ site.baseurl }}/images/members/{{ member.photo }}"
+             alt="{{ member.name | escape }}"
+             loading="lazy">
 
-| Name | Start Date | Research Topic |
-| --- | --- | --- |
-| SeungHee Ma | TBD | Continual Learning, Speech LLM |
-| NamHyun Cho | TBD | TBD |
+        {% else %}
 
-## Master Students
+        <div class="member-photo-placeholder"
+             aria-label="Profile photo unavailable"
+             role="img">
+          <i data-lucide="user-round"
+             aria-hidden="true"></i>
+        </div>
 
-| Name | Start Date | Research Topic |
-| --- | --- | --- |
-| GyuTae Park | 2026.03 | Speech LLM |
-| JinHyeong Kim | 2026.09 | Audio Generation, Spatial Audio |
+        {% endif %}
 
-## Undergraduate Researchers
+        <h3>{{ member.name }}</h3>
 
-| Name | Start Date | Research Topic |
-| --- | --- | --- |
-| DongHwan Jang | 2026.07 | Audio Generation |
-| DongYoung Kim | 2026.09 | Sound World Model |
+        <p class="member-start">
+          Since {{ member.start }}
+        </p>
+
+        <p class="member-research">
+          {{ member.research }}
+        </p>
+
+      </article>
+
+      {% endfor %}
+
+    </div>
+
+  </section>
+
+  {% endfor %}
 
 </div>

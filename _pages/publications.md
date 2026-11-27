@@ -58,6 +58,7 @@ permalink: /publications/
   <div class="publication-filter-bottom">
 
     <span id="publication-count"
+          class="sr-only"
           role="status"
           aria-live="polite"></span>
 

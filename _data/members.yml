@@ -1,0 +1,35 @@
+- group: "Ph.D. Students"
+  members:
+    - name: "SeungHee Ma"
+      start: "TBD"
+      research: "Continual Learning, Speech LLM"
+      photo: ""
+
+    - name: "NamHyun Cho"
+      start: "TBD"
+      research: "TBD"
+      photo: ""
+
+- group: "Master's Students"
+  members:
+    - name: "GyuTae Park"
+      start: "2026.03"
+      research: "Speech LLM"
+      photo: ""
+
+    - name: "JinHyeong Kim"
+      start: "2026.09"
+      research: "Audio Generation, Spatial Audio"
+      photo: ""
+
+- group: "Undergraduate Researchers"
+  members:
+    - name: "DongHwan Jang"
+      start: "2026.07"
+      research: "Audio Generation"
+      photo: ""
+
+    - name: "DongYoung Kim"
+      start: "2026.09"
+      research: "Sound World Model"
+      photo: ""

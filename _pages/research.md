@@ -14,11 +14,6 @@ permalink: /research/
 
     <div class="research-heading-line"></div>
 
-    <p>
-      Exploring intelligence through speech, audio,
-      and multimodal understanding.
-    </p>
-
   </div>
 
 
@@ -76,7 +71,6 @@ permalink: /research/
 
       <section class="research-block" id="sound-world-model">
 
-        <span class="research-label">RESEARCH 01</span>
 
         <h2>Sound World Model for Physical AI</h2>
 
@@ -106,7 +100,6 @@ permalink: /research/
 
       <section class="research-block" id="speech-llm">
 
-        <span class="research-label">RESEARCH 02</span>
 
         <h2>Speech-LLM</h2>
 
@@ -135,7 +128,6 @@ permalink: /research/
 
       <section class="research-block" id="on-device-ai">
 
-        <span class="research-label">RESEARCH 03</span>
 
         <h2>On-device Speech-LLM for Physical AI</h2>
 
@@ -164,7 +156,6 @@ permalink: /research/
 
       <section class="research-block" id="multimodal-audio">
 
-        <span class="research-label">RESEARCH 04</span>
 
         <h2>Multimodal Video-to-Audio Synthesis</h2>
 
@@ -203,7 +194,6 @@ permalink: /research/
 
       <section class="research-block" id="explainable-ai">
 
-        <span class="research-label">RESEARCH 05</span>
 
         <h2>음성 명료도 평가 및 설명가능한 인공지능 기법 연구</h2>
 
@@ -264,7 +254,6 @@ permalink: /research/
 
       <section class="research-block" id="speech-recognition">
 
-        <span class="research-label">RESEARCH 06</span>
 
         <h2>End-to-End 방식의 음성인식 시스템</h2>
 

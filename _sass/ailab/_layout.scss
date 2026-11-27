@@ -231,9 +231,21 @@ body > .container-fluid {
     background-color: var(--ailab-yellow-light);
 }
 
-.ailab-dropdown summary:focus-visible {
-    outline: 2px solid var(--ailab-gray-700);
-    outline-offset: 3px;
+.ailab-header a:focus,
+.ailab-header button:focus,
+.ailab-header summary:focus {
+    outline: none;
+}
+
+.ailab-header a:focus-visible,
+.ailab-header summary:focus-visible {
+    text-decoration: underline;
+    text-decoration-color: var(--ailab-yellow);
+    text-underline-offset: 6px;
+}
+
+.ailab-menu-toggle:focus-visible {
+    box-shadow: 0 0 0 2px var(--ailab-yellow);
 }
 
 
