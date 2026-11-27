@@ -1,1 +1,263 @@
+/* =========================================
+   AILab Home Design v1.0
+   ========================================= */
+
+
+/* 1. Hero Section */
+
+.home-hero {
+    padding: 25px 0 20px;
+}
+
+.home-hero h1 {
+    text-align: center;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 15px 0 35px;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--ailab-gray-700);
+    margin-bottom: 16px;
+}
+
+#homeid .home-hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 35px 0 0;
+    border-radius: 8px;
+}
+
+
+/* 2. Common Home Sections */
+
+.home-section {
+    margin-top: 60px;
+}
+
+.home-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.home-section-header h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.home-section-header > a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* 3. Research Areas */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.research-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+
+    background-color: var(--ailab-white);
+    border: 1px solid var(--ailab-gray-200);
+    border-radius: 8px;
+
+    padding: 24px;
+    min-height: 115px;
+}
+
+.research-card svg {
+    width: 26px;
+    height: 26px;
+    color: var(--ailab-gray-500);
+    stroke-width: 1.7;
+}
+
+.research-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* 4. Featured Publications */
+
+.featured-section {
+    background-color: var(--ailab-gray-50);
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.featured-publications {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.featured-paper {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+    background-color: var(--ailab-white);
+    border: 1px solid var(--ailab-gray-200);
+    border-radius: var(--ailab-radius);
+}
+
+.conference-label {
+    align-self: flex-start;
+
+    background-color: var(--ailab-yellow-light);
+    color: #806400;
+
+    padding: 5px 10px;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.featured-paper h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 18px 0 12px;
+}
+
+.featured-paper p {
+    color: var(--ailab-gray-500);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.featured-paper > a {
+    margin-top: auto;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* 5. Latest News */
+
+.home-news-list {
+    border-top: 2px solid var(--ailab-gray-300);
+}
+
+.home-news-row {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 25px;
+
+    padding: 20px 12px;
+    border-bottom: 1px solid var(--ailab-gray-200);
+
+    transition: background-color 0.2s ease;
+}
+
+.home-news-row:hover {
+    background-color: #FFFDF2;
+}
+
+.home-news-date {
+    color: var(--ailab-gray-500);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.home-news-content {
+    font-size: 15px;
+}
+
+.home-news-content p {
+    margin: 0;
+}
+
+
+/* 6. Tablet */
+
+@media (max-width: 991px) {
+
+    .research-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-publications {
+        grid-template-columns: 1fr;
+    }
+
+    .home-section {
+        margin-top: 45px;
+    }
+}
+
+
+/* 7. Mobile */
+
+@media (max-width: 600px) {
+
+    .home-hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .research-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .research-card {
+        padding: 16px;
+        min-height: 100px;
+    }
+
+    .research-card h3 {
+        font-size: 14px;
+    }
+
+    .research-card svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .home-section-header h2 {
+        font-size: 24px;
+    }
+
+    .featured-section {
+        padding: 18px;
+    }
+
+    .home-news-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 16px 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-news-row {
+        transition: none;
+    }
+}
+
 
